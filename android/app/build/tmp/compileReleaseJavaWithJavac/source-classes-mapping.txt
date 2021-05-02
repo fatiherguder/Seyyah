@@ -1,0 +1,9 @@
+com/seyyah/BuildConfig.java
+ com.seyyah.BuildConfig
+com/seyyah/MainActivity.java
+ com.seyyah.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/seyyah/MainApplication.java
+ com.seyyah.MainApplication
+ com.seyyah.MainApplication$1
