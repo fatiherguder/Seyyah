@@ -24,7 +24,12 @@
 
    return (
     <View style={styles.background}>
-        <TouchableOpacity style={styles.cards} onPress={() => props.navigation.push('Detail')}>
+        <TouchableOpacity style={styles.cards} onPress={() => props.navigation.push('Detail',
+        {title:props.title,
+        img:props.img,
+        puan:props.puan,
+        category:props.category,
+        page:props.page})}>
           <View style={styles.imgArea}>
             <Image style={styles.img} source={props.img} />
           </View>

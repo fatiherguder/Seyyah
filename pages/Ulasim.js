@@ -6,108 +6,65 @@
  * @flow strict-local
  */
 
- import React from 'react';
- import {
-   SafeAreaView,
-   StyleSheet,
-   Text,
-   View,
-   Image,
-   TextInput,
-   TouchableOpacity,
-   ScrollView
- } from 'react-native';
- import UlasimCard from '../components/ulasimCard'
- import Navbar from '../components/navbar'
- 
- 
- 
- const Ulasim = ({navigation}) => {
-    let thy = require('../img/thy.png');
-    let pegasus = require('../img/pegasus.png');
-   return (
+import React, { useEffect, useState } from "react";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import UlasimCard from "../components/ulasimCard";
+import Navbar from "../components/navbar";
+import firestore from "@react-native-firebase/firestore";
+
+const Ulasim = ({ navigation }) => {
+  const [data, setData] = useState([]);
+  const data1 = [];
+
+
+
+  useEffect(() => {
+    var tempData = [];
+    const api = firestore()
+      .collection("konya")
+      .doc("ulasim")
+      .collection("0")
+      .onSnapshot((snapshot) => {
+        snapshot.docs.map(doc => tempData.push(doc.data()))
+        setData(tempData);
+      });
+  }, [])
+
+  let thy = require("../img/thy.png");
+  let pegasus = require("../img/pegasus.png");
+  return (
     <View style={styles.background}>
-        <Navbar title={'Ulaşım'}/>
+      <Navbar title={"Ulaşım"} />
+      {data != null ? (
         <ScrollView>
-          <UlasimCard
-            logo={thy}
-            fiyat={'200'}
-            tarih={'30.03.2021'}
-            saat={'12.40'}
+          {data.map(item =>  <UlasimCard
+            logo={item.firma == 'thy' ? thy : pegasus}
+            fiyat={item.fiyat}
+            tarih={item.tarih}
+            saat={item.saat}
+            page={"ulasim"}
+            firma={item.firma}
             navigation={navigation}
-          />
-          <UlasimCard
-            logo={pegasus}
-            fiyat={'240'}
-            tarih={'30.03.2021'}
-            saat={'15.20'}
-            navigation={navigation}
-          />
-          <UlasimCard
-            logo={thy}
-            fiyat={'200'}
-            tarih={'30.03.2021'}
-            saat={'12.40'}
-            navigation={navigation}
-          />
-          <UlasimCard
-            logo={pegasus}
-            fiyat={'240'}
-            tarih={'30.03.2021'}
-            saat={'15.20'}
-            navigation={navigation}
-          />
-          <UlasimCard
-            logo={thy}
-            fiyat={'200'}
-            tarih={'30.03.2021'}
-            saat={'12.40'}
-            navigation={navigation}
-          />
-          <UlasimCard
-            logo={pegasus}
-            fiyat={'240'}
-            tarih={'30.03.2021'}
-            saat={'15.20'}
-            navigation={navigation}
-          />
-          <UlasimCard
-            logo={thy}
-            fiyat={'200'}
-            tarih={'30.03.2021'}
-            saat={'12.40'}
-            navigation={navigation}
-          />
-          <UlasimCard
-            logo={pegasus}
-            fiyat={'240'}
-            tarih={'30.03.2021'}
-            saat={'15.20'}
-            navigation={navigation}
-          />
-          <UlasimCard
-            logo={thy}
-            fiyat={'200'}
-            tarih={'30.03.2021'}
-            saat={'12.40'}
-            navigation={navigation}
-          />
-          <UlasimCard
-            logo={pegasus}
-            fiyat={'240'}
-            tarih={'30.03.2021'}
-            saat={'15.20'}
-            navigation={navigation}
-          />
+          />)}
         </ScrollView>
-      </View>
-   );
- };
- 
- const styles = StyleSheet.create({
-    background: {
-        backgroundColor: '#f1f1f1',
-      },
- });
- 
- export default Ulasim;
+      ) : null}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  background: {
+    backgroundColor: "#f1f1f1",
+  },
+});
+
+export default Ulasim;

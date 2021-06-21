@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Seyyah.iml" filepath="$PROJECT_DIR$/.idea/modules/Seyyah.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Seyyah.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Seyyah.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/442676289/Seyyah.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/442676289/Seyyah.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1538844598/Seyyah.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/1538844598/Seyyah.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/549141670/Seyyah.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/549141670/Seyyah.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2012277407/Seyyah.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/2012277407/Seyyah.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-644598409/Seyyah.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-644598409/Seyyah.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2136423392/Seyyah.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/2136423392/Seyyah.react-native-vector-icons.iml" />
+    </modules>
+  </component>
+</project>

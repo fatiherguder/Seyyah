@@ -3,7 +3,7 @@ import { Text, View, Image, StyleSheet, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/Octicons';
 import Icon1 from 'react-native-vector-icons/EvilIcons';
 
-const Comment = () => {
+const Comment = (props) => {
 
     const createStar = () => {
         let star = []
@@ -20,12 +20,12 @@ const Comment = () => {
                   <Icon1 name="user" size={50} color="black" />
               </View>
               <View style={{paddingRight:30}}>
-                  <Text style={styles.baslik}>Lorem ipsum dolor sit amet</Text>
+                  <Text style={styles.baslik}>{props.name}</Text>
                   <View style = {styles.star}>
                         {createStar()}
-                        <Text style={{fontSize:12}}> 4.3</Text>
+                        <Text style={{fontSize:12}}> {props.puan}</Text>
                     </View>
-                  <Text style={styles.icerik}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique mollis ullamcorper.</Text>
+                  <Text style={styles.icerik}>{props.icerik}</Text>
               </View>
           </View>
     )

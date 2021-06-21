@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "478181100661",
+    "firebase_url": "https://seyyah-43bbe-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "seyyah-43bbe",
+    "storage_bucket": "seyyah-43bbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478181100661:android:d6b571b87e6cb3fbce7c3c",
+        "android_client_info": {
+          "package_name": "com.seyyah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478181100661-2qg8fvjjqjuj09apiv2qvk5vkgt4bb11.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZb2fhONLjtEfvITuWdSbuhoqilYWBrTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478181100661-2qg8fvjjqjuj09apiv2qvk5vkgt4bb11.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

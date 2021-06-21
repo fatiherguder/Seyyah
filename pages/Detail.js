@@ -1,42 +1,79 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Text, View, Image, StyleSheet, ScrollView, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/Octicons';
 import Icon1 from 'react-native-vector-icons/EvilIcons';
 import { roundToNearestPixel } from 'react-native/Libraries/Utilities/PixelRatio';
 import Comment from '../components/comment'
+import { useRoute } from '@react-navigation/native';
+import firestore from "@react-native-firebase/firestore";
 
-const Detail = (navigation, route) => {
+const Detail = (navigation) => {
+
+  const route = useRoute();
 
     const createStar = () => {
         let star = []
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < route.params.puan; i++) {
           
           star.push(<Icon name="primitive-dot" size={25} color="#fcbf49" />)
         }
         return star
       }
 
+      const [data, setData] = useState([]);
+
+      useEffect(() => {
+        var tempData = [];
+        var page = route.params.page
+        const api = firestore()
+          .collection("konya")
+          .doc(page)
+          .collection("0")
+          .onSnapshot((snapshot) => {
+            snapshot.docs.map(doc => tempData.push(doc.data()))
+            setData(tempData);
+          });
+      }, [])
+
+      
+      console.log(route.params)
+
     return (
         <ScrollView style={styles.background}>
-            <Image style={styles.img} source={require('../img/nereyeGidilir/bilim.jpg')}/>
+            {data != null ? (
+              <View>
+                {data.map(item => item.title == route.params.title && (item.firma == route.params.firma && item.saat == route.params.saat) ? (
+                  <View>
+                  <Image style={styles.img} source={route.params.img}/>
             <View style={styles.info}>
-                <Text style={styles.title}>Bilim Merkezi</Text>
+                <Text style={styles.title}>{route.params.title}</Text>
                 <View style={styles.div}>
                     <View style = {styles.star}>
                         {createStar()}
-                        <Text> 4.3</Text>
+                        <Text> {route.params.puan}</Text>
                     </View>
-                    <Text style={{paddingLeft:10}}>- Müze</Text>
+                    <Text style={{paddingLeft:10}}>- {route.params.category}</Text>
                 </View>
-                <Text>Konya Büyükşehir Belediyesi’nin TÜBİTAK desteğiyle yapımını sürdürdüğü Türkiye’nin ilk Bilim Merkezi.1.7.Konya Bilim Merkezi: Konya Büyükşehir Belediyesi’nin TÜBİTAK desteğiyle yapımını sürdürdüğü Türkiye’nin ilk Bilim Merkezi.</Text>
+                <Text>{item.bilgi}</Text>
           </View>
           <Text style={[styles.commentTitle, {paddingTop:20}]}>Adres:</Text>
-          <Text style={{paddingHorizontal:10}}>Büyükkayacık, Ankara Cd. No:292, 42250 Büyükkayacık Osb/Selçuklu/Konya</Text>
+          <Text style={{paddingHorizontal:10}}>{item.adres}</Text>
           <View style={styles.commetArea}>
             <Text style={styles.commentTitle}>Seyehat Edenlerin Yorumları</Text>
-            <Comment/>
-            <Comment/>
+            {
+              item.yorum != null ? (
+                <View>
+                  {item.yorum.map(yorum => <View>
+                    <Comment name={yorum.name} icerik={yorum.icerik} puan={yorum.puan}/>
+                  </View>)}
+                </View>
+              ): null
+            }
           </View>
+                </View>
+                ):null)}
+              </View>
+            ) : null}
         </ScrollView>
     )
 }

@@ -14,7 +14,13 @@
 
   return (
     <View style={styles.background}>
-    <TouchableOpacity style={styles.cards} onPress={() => props.navigation.push('Detail')}>
+    <TouchableOpacity style={styles.cards} onPress={() => props.navigation.push('Detail',{
+      img:props.logo,
+      tarih:props.tarih,
+      saat:props.saat,
+      page:props.page,
+      firma:props.firma
+    })}>
       <View>
         <Image style={styles.img} source={props.logo} />
       </View>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import { Button, View, Text, Image, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -11,20 +11,78 @@ import Ulasim from './pages/Ulasim'
 import Konaklama from './pages/Konaklama'
 import NereyeGidilir from './pages/NereyeGidilir'
 import NeYenir from './pages/NeYenir'
+import DateTimePicker from '@react-native-community/datetimepicker';
+import { Icon, InlineIcon } from '@iconify/react';
+import dateLine from '@iconify-icons/clarity/date-line';
+
+
 
 
 function HomeStackScreen({navigation}){
+
+
+  const [date, setDate] = useState(new Date(1598051730000));
+  const [mode, setMode] = useState('date');
+  const [show, setShow] = useState(false);
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate || date;
+    setShow(Platform.OS === 'ios');
+    setDate(currentDate);
+  };
+
+  const showMode = (currentMode) => {
+    setShow(true);
+    setMode(currentMode);
+  };
+
+  const showDatepicker = () => {
+    showMode('date');
+  };
+
+  const showTimepicker = () => {
+    showMode('time');
+  };
+
+
+  
   return(
     <View style={styles.background}>
     <View style={styles.logoArea}>
       <Image style={styles.logo} source={require('./img/logo.png')} />
     </View>
     <View style={styles.formArea}>
+    <TextInput
+        placeholder={'Nereden'}
+        placeholderTextColor="#000" 
+        style={styles.input}
+      />
       <TextInput
         placeholder={'Nereye Gitmek İstersiniz?'}
         placeholderTextColor="#000" 
         style={styles.input}
       />
+
+<View>
+      <View>
+        <TouchableOpacity onPress={showDatepicker} title="Show date picker!">
+          <Text>tarih</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        <Button onPress={showTimepicker} title="Show time picker!" />
+      </View>
+      {show && (
+        <DateTimePicker
+          testID="dateTimePicker"
+          value={date}
+          mode={mode}
+          is24Hour={true}
+          display="default"
+          onChange={onChange}
+        />
+      )}
+    </View>
 
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Main')} >
         <Text style={styles.buttonText}>Devam</Text>
