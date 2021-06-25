@@ -17,6 +17,7 @@ MERGED from [:react-native-gesture-handler] C:\Users\fatih\Desktop\Seyyah\node_m
 MERGED from [:react-native-safe-area-context] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-vector-icons] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.64.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\221d1cc48011a5b26dd6bff97f7e33fd\jetified-react-native-0.64.0\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\bc41568f187cafaf5fb6dce3136d9ccf\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\f89e12a37dba8a4a730f61157fb9e507\jetified-android-jsc-r245459\AndroidManifest.xml:2:1-11:12
@@ -141,6 +142,8 @@ MERGED from [com.google.firebase:firebase-analytics:19.0.0] C:\Users\fatih\.grad
 MERGED from [com.google.firebase:firebase-analytics:19.0.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\47a22d42accc6fe24601a71e457e4f8a\jetified-firebase-analytics-19.0.0\AndroidManifest.xml:7:5-20
 MERGED from [:react-native-community_datetimepicker] C:\Users\fatih\Desktop\Seyyah\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20
 MERGED from [:react-native-community_datetimepicker] C:\Users\fatih\Desktop\Seyyah\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20
+MERGED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
 MERGED from [com.facebook.react:react-native:0.64.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\221d1cc48011a5b26dd6bff97f7e33fd\jetified-react-native-0.64.0\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.64.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\221d1cc48011a5b26dd6bff97f7e33fd\jetified-react-native-0.64.0\AndroidManifest.xml:11:5-20
 MERGED from [com.google.firebase:firebase-firestore:23.0.1] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\cbb4dd00a77ee30c7ef3a16d677c1603\jetified-firebase-firestore-23.0.1\AndroidManifest.xml:16:5-24:19
@@ -259,6 +262,8 @@ MERGED from [:react-native-screens] C:\Users\fatih\Desktop\Seyyah\node_modules\r
 MERGED from [:react-native-screens] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.64.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\221d1cc48011a5b26dd6bff97f7e33fd\jetified-react-native-0.64.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.64.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\221d1cc48011a5b26dd6bff97f7e33fd\jetified-react-native-0.64.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\bc41568f187cafaf5fb6dce3136d9ccf\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
@@ -435,6 +440,22 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.75.1] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\e1d669587456380c8d4e62dfc92484ee\jetified-flipper-0.75.1\AndroidManifest.xml:16:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.75.1] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\e1d669587456380c8d4e62dfc92484ee\jetified-flipper-0.75.1\AndroidManifest.xml:16:22-73
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-19:63
+	android:resource
+		ADDED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:17-60
+	android:name
+		ADDED from [:react-native-webview] C:\Users\fatih\Desktop\Seyyah\node_modules\react-native-webview\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-firestore:23.0.1] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\cbb4dd00a77ee30c7ef3a16d677c1603\jetified-firebase-firestore-23.0.1\AndroidManifest.xml:13:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] C:\Users\fatih\.gradle\caches\transforms-2\files-2.1\2fd764fbcef7d760bfc7e9a625efd075\jetified-play-services-measurement-api-19.0.0\AndroidManifest.xml:23:5-79

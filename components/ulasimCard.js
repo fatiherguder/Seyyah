@@ -12,6 +12,13 @@
 
  const Ulasim = (props) => {
 
+  let url
+  if(props.firma == 'thy'){
+    url = 'https://www.turkishairlines.com/tr-int/'
+  }else{
+    url='https://www.flypgs.com/'
+  }
+
   return (
     <View style={styles.background}>
     <TouchableOpacity style={styles.cards} onPress={() => props.navigation.push('Detail',{
@@ -19,7 +26,8 @@
       tarih:props.tarih,
       saat:props.saat,
       page:props.page,
-      firma:props.firma
+      firma:props.firma,
+      webUrl:url
     })}>
       <View>
         <Image style={styles.img} source={props.logo} />

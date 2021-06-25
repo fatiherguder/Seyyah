@@ -12,8 +12,6 @@ import Konaklama from './pages/Konaklama'
 import NereyeGidilir from './pages/NereyeGidilir'
 import NeYenir from './pages/NeYenir'
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { Icon, InlineIcon } from '@iconify/react';
-import dateLine from '@iconify-icons/clarity/date-line';
 
 
 
@@ -63,14 +61,11 @@ function HomeStackScreen({navigation}){
         style={styles.input}
       />
 
-<View>
+    <View>
       <View>
-        <TouchableOpacity onPress={showDatepicker} title="Show date picker!">
-          <Text>tarih</Text>
+        <TouchableOpacity style={[styles.input,{paddingTop:12,paddingBottom:12, paddingLeft:5}]} onPress={showDatepicker}>
+          <Text style={{}}>Tarihi Seçin</Text>
         </TouchableOpacity>
-      </View>
-      <View>
-        <Button onPress={showTimepicker} title="Show time picker!" />
       </View>
       {show && (
         <DateTimePicker

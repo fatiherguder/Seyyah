@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Text, View, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import Card from '../components/card'
 import Navbar from '../components/navbar'
 
@@ -21,14 +21,15 @@ const NeYenir = (navigation) => {
           });
       }, [])
 
+    
 
     return (
         <View>
           <Navbar title={"Ne Yenir ?"} />
           {data != null ? (
             <ScrollView>
-              {data.map(item => <Card
-                img={require('../img/yemek/kandil.jpg')}
+              {data.map(item=> <Card
+                img={require('../img/yemek/medrese.jpg')}
                 title={item.title}
                 puan={item.puan}
                 category={item.category}

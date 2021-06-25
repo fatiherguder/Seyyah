@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Text, View,ScrollView } from 'react-native';
+import { View,ScrollView } from 'react-native';
 import Card from '../components/card'
 import Navbar from '../components/navbar'
 import firestore from "@react-native-firebase/firestore";
